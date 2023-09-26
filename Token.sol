@@ -5,8 +5,8 @@ pragma solidity ^0.8.13;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract MintToken is ERC20,Ownable {
-    constructor() ERC20("Mint Token", "MTOK") {
+contract ManageToken is ERC20,Ownable {
+    constructor() ERC20("Manage Token", "MTOK") {
         _mint(msg.sender, 50 * (10 ** decimals()));
     }
         function mint(address to, uint256 amount) public onlyOwner {
